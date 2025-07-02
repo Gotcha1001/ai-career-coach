@@ -3,6 +3,7 @@ import { WebPDFLoader } from "@langchain/community/document_loaders/web/pdf";
 import { inngest } from "@/inngest/client";
 import axios from "axios";
 import { currentUser } from "@clerk/nextjs/server";
+import { getRuns } from "@/lib/inngestUtils";
 
 // export async function POST(req: NextRequest) {
 //   const FormData = await req.formData();
@@ -87,14 +88,14 @@ export async function POST(req: NextRequest) {
   return NextResponse.json(output);
 }
 
-export async function getRuns(runId: string) {
-  const url = `${process.env.INNGEST_SERVER_HOST}/v1/events/${runId}/runs`;
+// export async function getRuns(runId: string) {
+//   const url = `${process.env.INNGEST_SERVER_HOST}/v1/events/${runId}/runs`;
 
-  const result = await axios.get(url, {
-    headers: {
-      Authorization: `Bearer ${process.env.INNGEST_SIGNING_KEY}`,
-    },
-  });
+//   const result = await axios.get(url, {
+//     headers: {
+//       Authorization: `Bearer ${process.env.INNGEST_SIGNING_KEY}`,
+//     },
+//   });
 
-  return result.data;
-}
+//   return result.data;
+// }
