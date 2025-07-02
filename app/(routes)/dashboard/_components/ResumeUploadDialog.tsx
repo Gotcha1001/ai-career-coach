@@ -67,22 +67,6 @@ function ResumeUploadDialog({ openResumeUpload, setOpenResumeDialog }: any) {
     }
   };
 
-  // const onUploadAndAnalyze = async () => {
-  //   setLoading(true);
-  //   const recordId = uuidv4();
-  //   const formData = new FormData();
-  //   formData.append("recordId", recordId);
-  //   formData.append("resumeFile", file);
-  //   // formData.append("aiAgentType", "/ai-tools/ai-resume-analyzer");
-
-  //   //Send FormData to Backend Server
-  //   const result = await axios.post("/api/ai-resume-agent", formData);
-  //   console.log("PDF RESULT:", result.data);
-  //   setLoading(false);
-  //   router.push("/ai-tools/ai-resume-analyzer/" + recordId);
-  //   setOpenResumeDialog(false);
-  // };
-
   const onUploadAndAnalyze = async () => {
     setLoading(true);
     const recordId = uuidv4();

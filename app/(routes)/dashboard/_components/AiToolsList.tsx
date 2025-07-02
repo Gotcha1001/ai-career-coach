@@ -24,13 +24,13 @@ export const aiToolsList = [
     button: "Generate Now",
     path: "/ai-tools/ai-roadmap-agent",
   },
-  {
-    name: "Cover Letter Generator",
-    desc: "Write a cover letter",
-    icon: "/cover.png",
-    button: "Create Now",
-    path: "/cover-letter-generator",
-  },
+  // {
+  //   name: "Cover Letter Generator",
+  //   desc: "Write a cover letter",
+  //   icon: "/cover.png",
+  //   button: "Create Now",
+  //   path: "/cover-letter-generator",
+  // },
 ];
 
 function AiToolsList() {

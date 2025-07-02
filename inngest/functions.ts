@@ -295,34 +295,6 @@ export const AiResumeAgent = inngest.createFunction(
   }
 );
 
-// export const AIRoadmapAgent = inngest.createFunction(
-//   { id: "AiRoadMapAgent" },
-//   { event: "AIRoadmapAgent" },
-//   async ({ event, step }) => {
-//     const { roadmapId, userInput, userEmail } = await event.data;
-//     const roadmapResult = await AIRoadmapGeneratorAgent.run(
-//       "UserInput:" + userInput
-//     );
-//     //@ts-ignore
-//     const rawContent = roadmapResult.output[0].content;
-//     const rawContentJson = rawContent.replace("```json", "").replace("```", "");
-//     const parseJson = JSON.parse(rawContentJson);
-
-//     // return roadmapResult;
-//     //Save to DB
-//     const saveToDb = await step.run("SaveToDb", async () => {
-//       await db.insert(HistoryTable).values({
-//         recordId: roadmapId,
-//         content: parseJson,
-//         aiAgentType: "/ai-tools/ai-roadmap-agent",
-//         createdAt: new Date().toString(),
-//         userEmail: userEmail,
-//         metaData: userInput,
-//       });
-//       return parseJson; // Explicitly return parseJson
-//     });
-//   }
-// );
 export const AIRoadmapAgent = inngest.createFunction(
   { id: "AiRoadMapAgent" },
   { event: "AIRoadmapAgent" },

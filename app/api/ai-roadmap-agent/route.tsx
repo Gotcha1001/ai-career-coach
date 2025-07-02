@@ -4,34 +4,6 @@ import { currentUser } from "@clerk/nextjs/server";
 import axios from "axios";
 import { NextRequest, NextResponse } from "next/server";
 
-// export async function POST(req: NextRequest) {
-//   const { roadmapId, userInput } = await req.json();
-//   const user = await currentUser();
-
-//   const resultIds = await inngest.send({
-//     name: "AIRoadmapAgent",
-//     data: {
-//       userInput: userInput,
-//       roadmapId: roadmapId,
-//       userEmail: user?.primaryEmailAddress?.emailAddress,
-//     },
-//   });
-
-//   const runId = resultIds?.ids[0];
-
-//   let runStatus;
-
-//   //Use Polling to check run status
-
-//   while (true) {
-//     runStatus = await getRuns(runId);
-//     if (runStatus?.data?.[0]?.status === "Completed") break;
-//     await new Promise((resolve) => setTimeout(resolve, 500));
-//   }
-
-//   return NextResponse.json(runStatus.data?.[0].output?.output[0]);
-// }
-
 export async function POST(req: NextRequest) {
   const { roadmapId, userInput } = await req.json();
   const user = await currentUser();
