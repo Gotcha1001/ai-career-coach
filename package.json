@@ -26,6 +26,7 @@
     "dagre": "^0.8.5",
     "dotenv": "^16.4.7",
     "drizzle-orm": "^0.39.1",
+    "firebase": "^11.10.0",
     "framer-motion": "^12.19.1",
     "imagekit": "^6.0.0",
     "inngest": "^3.39.2",
